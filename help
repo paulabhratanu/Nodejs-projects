@@ -1,0 +1,42 @@
+node init[creates package.json  which contains description]
+modify server.js file to write yourn own code
+
+
+
+const url = require('url');->The url module provides utilities for URL resolution and parsing.
+url.parse('http://stackoverflow.com/questions/17184791').pathname ->"/questions/17184791"    
+filename = path.join(__dirname, '../data/file.txt');->To read data/file.txt into pwd.
+process.cwd()->To use the current working directory of the process.
+unescape(uri)->decodes an encoded string.
+lstatSync(fileName)->stats of the file.
+createReadStream(fileName)->read the file.
+readStream.pipe(res);-> This just pipes the read stream to the response object (which goes to the client)
+
+Express js->web framework for nodejs.
+var app = express();-> Calls the express function "express()" and puts new Express application inside the app variable (to start a new Express application)
+
+app.use(bodyParser.json())-> basically tells the system that you want json to be used.
+ 
+bodyParser.urlencoded({extended: ...})-> basically tells the system whether you want to use a simple algorithm for shallow parsing (i.e. false) or complex algorithm for deep parsing that can deal with nested objects (i.e. true) 
+
+jade->template engine for views and layouts.
+
+Nodemailer-> is a module for Node.js applications to allow easy as cake email sending
+
+mongoose->ORM for mapping database with our app.
+
+connect-flash->show messages[you are logged in].
+
+express-validator->form validation.
+
+passport->Passport is authentication middleware for Node.js. Extremely flexible and modular.
+
+multer->to upload images.
+        
+function(newUser,callback)->When you pass a function as an argument, it is known as a callback function, and when you return a value through this callback function, the value is a parameter of the passed function.
+
+next() --> which means go to next middleware function()
+done() ->used in passport framework
+
+monk()->ORM like mongoose.
+moment->date and time formatting.

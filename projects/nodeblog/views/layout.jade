@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+   .container
+    image.logo(src='/images/relucantreno.png')
+    nav
+     ul
+      li
+       a(href='/') Home
+      li
+       a(href='/posts/add') Add Post
+      li
+       a(href='/categories/add') Add Category
+      li
+       a(href='/users/register') Register
+      li
+       a(href='/users/login') Login
+      li
+       a(href='/users/logout') Logout
+    block content
+    footer
+     p NodeBlog &copy; 2017

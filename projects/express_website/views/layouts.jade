@@ -1,0 +1,25 @@
+doctype html
+html(lang='en')
+  head
+    title Jumbotron Template for Bootstrap
+    link(href='stylesheet/bootstrap.css', rel='stylesheet')
+  body
+    nav.navbar.navbar-expand-md.navbar-dark.bg-dark
+      a.navbar-brand(href='#') PC repair
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarsExampleDefault', aria-controls='navbarsExampleDefault', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarsExampleDefault.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+          li.nav-item.active
+            a.nav-link(href='/')
+              | Home 
+              span.sr-only (current)
+          li.nav-item
+            a.nav-link(href='/about') About
+          li.nav-item
+            a.nav-link(href='/contact') Contact
+    .container
+     block content
+    hr
+    footer
+     p(class='text-center') © Company 2017

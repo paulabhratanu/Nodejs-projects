@@ -1,0 +1,34 @@
+doctype html
+html(lang='en')
+  head
+    title Jumbotron Template for Bootstrap
+    link(href='/stylesheets/bootstrap.css', rel='stylesheet')
+    link(href='/stylesheets/style.css', rel='stylesheet')
+  body
+    nav.navbar.navbar-expand-md.navbar-dark.bg-dark
+      a.navbar-brand(href='#') PC repair
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarsExampleDefault', aria-controls='navbarsExampleDefault', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarsExampleDefault.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+          if user
+           li(class=(title== 'Members' ? 'active' : ''))
+             a.nav-link(href='/')
+               | Members
+               span.sr-only (current)
+          if !user
+           li(class=(title== 'Register' ? 'active' : ''))
+             a.nav-link(href='/users/register') Register
+           li(class=(title== 'Login' ? 'active' : ''))
+             a.nav-link(href='/users/login') Login
+        ul.nav.navbar-nav.navbar-right
+          if user
+           li.nav-item
+             a.nav-link(href='/users/logout') Logout
+          if user
+           li.nav-item
+             a.nav-link(href='/users/changepassword') ChangePassword
+    .container
+     != messages()
+     block content
+     script(src='/javascripts/bootstrap.js')
